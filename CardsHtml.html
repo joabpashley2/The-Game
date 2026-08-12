@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <link rel="stylesheet" href = "CardsCss.css">
+            <title> The Card Game </title>
+        </head>
+<h1> The Card Game </h1>
+<br>
+<p>Player 1</p>
+<input id="player1-input" type="text" placeholder="Input a Username: ">
+<button onclick="player1InputButton()"> Select </button>
+<select id="deck1-opt">
+    <option selected disabled>Select Deck</option>
+    <option>Khaos</option>
+    <option>Ninja</option>
+    <option>Samurai</option>
+    <option>Frog</option>
+    <option>Robo</option>
+    <option>Phantom</option>
+    <option>Enslaved Soul</option>
+</select>
+<p id="test-player1-name">Player1's Name is Set as: </p>
+<p id="player1-deck">Player1's Deck is Set as: </p>
+<br>
+<p>Player 2</p>
+<input id="player2-input" type="text" placeholder="Input a Username: ">
+<button onclick="player2InputButton()"> Select </button>
+<select id="deck2-opt">
+    <option selected disabled>Select Deck</option>
+    <option>Khaos</option>
+    <option>Ninja</option>
+    <option>Samurai</option>
+    <option>Frog</option>
+    <option>Robo</option>
+    <option>Phantom</option>
+    <option>Enslaved Soul</option>
+</select>
+<p id="test-player2-name">Player2's Name is Set as: </p>
+<p id="player2-deck">Player2's Deck is Set as: </p>
+<br>
+<br>
+<button onclick="goToGame()">Play</button>
+<br>
+<br>
+<p id="error-message"></p>
+        <script src = "CardsJs.js"> </script>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#game-box {
+  /* Main Field */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  border: solid 5px;
+  background-color: rgb(2, 2, 83);
+  min-width: 0;
+}
+#field-and-descriptory {
+    flex: 13;
+    display: flex;
+    gap: 5px;
+    border: 5px;
+    margin: 2.5px 5px 2.5px 5px;
+    padding: 5px;
+    align-items: stretch;
+    min-width: 0;
+}
+#hand-and-core-and-champions {
+    flex: 7;
+    display: flex;
+    gap: 5px;
+    border: 5px;
+    margin: 2.5px 5px 2.5px 5px;
+    padding: 5px;
+    flex-direction: row;
+    min-width: 0;
+}
+#field {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    gap: 5px;
+}
+#player1-field {
+    flex: 1;
+    display: flex;
+    border: 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#p1-card-zone1{
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p1-card-zone2 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p1-card-zone3 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p1-card-zone4 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p1-card-zone5 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p1-card-zone6 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#player2-field {
+    flex: 1;
+    display: flex;
+    border: 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#p2-card-zone1{
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-card-zone2 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-card-zone3 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-card-zone4 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-card-zone5 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-card-zone6 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#hand {
+    flex: 7.85;
+    display: flex;
+    border: solid 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    gap: 5px;
+}
+#p2-hand-zone1{
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-hand-zone2 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-hand-zone3 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-hand-zone4 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-hand-zone5 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-hand-zone6 {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#descriptory {
+    flex: 1.77;
+    display: flex;
+    border: solid 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+#core {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    margin: 5px 0 5px 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+#champions {
+    flex: 2;
+    display: flex;
+    border: solid 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    gap: 5px;
+}
+#p1-champion {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#p2-champion {
+    flex: 1;
+    display: flex;
+    border: solid 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#score {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    gap: 5px;
+    padding: 0;
+    text-align: center;
+    align-items: stretch;
+    min-width: 0;
+}
+#player1-score {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+}
+#player2-score {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+}
+.important {
+    font-weight: bold;
+    text-decoration: underline;
+    min-width: 0;
+    width: 100%;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+}
+p{
+    margin: 0;
+}
+.art {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
