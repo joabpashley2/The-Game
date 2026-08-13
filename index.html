@@ -44,6 +44,64 @@
 <br>
 <br>
 <p id="error-message"></p>
-        <script src = "CardsJs.js"> </script>
+    <!-- 1. The PeerJS Network Library (Keep this here) -->
+    <script src="https://unpkg.com"></script>
+
+    <!-- 2. Your external game file (Keep this completely separate) -->
+    <script src="CardsJs.js"></script>
+
+    <!-- 3. Your multiplayer connection block (No "src" attribute here) -->
+    <script>
+        // --- CORE CONNECTION ENGINE ---
+        const peer = new Peer();
+        let activeConnection = null;
+
+        peer.on('open', (id) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const targetRoomId = urlParams.get('room');
+            if (targetRoomId) {
+                // If you open a link with ?room=, connect to it
+                activeConnection = peer.connect(targetRoomId);
+                setupConnectionListeners(activeConnection);
+            } else {
+                // THIS IS WHAT WILL PRINT IN YOUR CONSOLE NOW!
+                console.log('SEND THIS LINK TO SYNC:', window.location.href + '?room=' + id);
+            }
+        });
+
+        peer.on('connection', (conn) => {
+            activeConnection = conn;
+            setupConnectionListeners(activeConnection);
+        });
+
+        // --- DATA HANDLING LOGIC ---
+        function setupConnectionListeners(conn) {
+            conn.on('data', (incomingData) => {
+                if (incomingData.type === 'FULL_SYNC') {
+                    // Overwrites current body content with the host's layout
+                    document.body.innerHTML = incomingData.html;
+                    console.log('Screen synced successfully!');
+                }
+            });
+        }
+
+        function sendEverythingToBrother() {
+            if (activeConnection && activeConnection.open) {
+                activeConnection.send({
+                    type: 'FULL_SYNC',
+                    html: document.body.innerHTML
+                });
+            }
+        }
+
+        // --- AUTOMATIC TRIGGERS ---
+        document.addEventListener('click', () => {
+            setTimeout(sendEverythingToBrother, 50); 
+        });
+
+        document.addEventListener('keydown', () => {
+            setTimeout(sendEverythingToBrother, 50);
+        });
+    </script>
     </body>
 </html>
