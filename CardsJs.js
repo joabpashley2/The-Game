@@ -1,5 +1,5 @@
-import { fireproof } from "use-fireproof";
-import { connect } from "@fireproof/netlify";
+import { fireproof } from "https://esm.sh";
+import { connect } from "https://esm.sh";
 
 const db = fireproof("my-synced-db");
 connect.netlify(db);
