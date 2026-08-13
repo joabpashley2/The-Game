@@ -10,3 +10,4 @@ fetch("./Cardscards.json")
     const KHAOS_DECK = data.khaosDeck;
 
   });
+  
