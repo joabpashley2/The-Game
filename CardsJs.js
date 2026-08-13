@@ -1,6 +1,3 @@
-import { fireproof } from "https://esm.sh";
-import { connect } from "https://esm.sh";
-
 const db = fireproof("my-synced-db");
 connect.netlify(db);
 let player1Name = document.getElementById("player1-input").value;
