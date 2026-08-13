@@ -32,3 +32,6 @@ function player2InputButton() {
     let deck2Final = document.getElementById("player2-deck");
     deck2Final.innerHTML = "Player2's Deck is Set as: " + deck2;
 }
+window.player2InputButton = player2InputButton;
+window.player1InputButton = player1InputButton;
+window.goToGame = goToGame;
