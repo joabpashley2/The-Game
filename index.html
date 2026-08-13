@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<html>
+    <body>
         <head>
             <link rel="stylesheet" href = "CardsCss.css">
             <title> The Card Game </title>
         </head>
-        <body>
 <h1> The Card Game </h1>
 <br>
 <p>Player 1</p>
@@ -43,70 +44,6 @@
 <br>
 <br>
 <p id="error-message"></p>
-    <!-- 1. CORRECTED CDN: The exact, working script address for PeerJS -->
-    <script src="https://jsdelivr.net"></script>
-
-    <!-- 2. Your external game file -->
-    <script src="CardsJs.js"></script>
-
-    <!-- 3. Your multiplayer connection block -->
-    <script>
-        // Wrapping everything ensures your browser finishes downloading PeerJS completely first
-        window.addEventListener('load', () => {
-            
-            // --- CORE CONNECTION ENGINE ---
-            const peer = new Peer();
-            let activeConnection = null;
-
-            peer.on('open', (id) => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const targetRoomId = urlParams.get('room');
-                if (targetRoomId) {
-                    activeConnection = peer.connect(targetRoomId);
-                    setupConnectionListeners(activeConnection);
-                } else {
-                    // THIS WILL FINALLY PRINT IN YOUR CONSOLE NOW!
-                    console.log('SEND THIS LINK TO SYNC:', window.location.href + '?room=' + id);
-                }
-            });
-
-            peer.on('connection', (conn) => {
-                activeConnection = conn;
-                setupConnectionListeners(activeConnection);
-            });
-
-            // --- DATA HANDLING LOGIC ---
-            function setupConnectionListeners(conn) {
-                conn.on('data', (incomingData) => {
-                    if (incomingData.type === 'FULL_SYNC') {
-                        document.body.innerHTML = incomingData.html;
-                        console.log('Screen synced successfully!');
-                    }
-                });
-            }
-
-            function sendEverythingToBrother() {
-                if (activeConnection && activeConnection.open) {
-                    activeConnection.send({
-                        type: 'FULL_SYNC',
-                        html: document.body.innerHTML
-                    });
-                }
-            }
-
-            // --- AUTOMATIC TRIGGERS ---
-            document.addEventListener('click', () => {
-                setTimeout(sendEverythingToBrother, 50); 
-            });
-
-            document.addEventListener('keydown', () => {
-                setTimeout(sendEverythingToBrother, 50);
-            });
-            
-        });
-    </script>
-</body>
-</html>
-
+<script src = "CardsJs.js"></script>
     </body>
 </html>

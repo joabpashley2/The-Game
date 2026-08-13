@@ -1,3 +1,8 @@
+import { fireproof } from "use-fireproof";
+import { connect } from "@fireproof/netlify";
+
+const db = fireproof("my-synced-db");
+connect.netlify(db);
 const urlParams = new URLSearchParams(window.location.search);
 const FINAL_PLAYER_1 = urlParams.get('user1');
 const FINAL_PLAYER_2 = urlParams.get('user2');

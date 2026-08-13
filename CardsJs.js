@@ -1,3 +1,8 @@
+import { fireproof } from "use-fireproof";
+import { connect } from "@fireproof/netlify";
+
+const db = fireproof("my-synced-db");
+connect.netlify(db);
 let player1Name = document.getElementById("player1-input").value;
 let player2Name = document.getElementById("player2-input").value;
 let deck1 = document.getElementById("deck1-opt").value;
